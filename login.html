@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <h1>LOGIN FORMS</h1>
+    <div class="container">
+    <form method="POST" name="google-sheet">
+<div>
+    <label>Name</label>
+    <input type="text" name="Name" placeholder="Enter your name">
+</div>
+<div>
+    <label>Email</label>
+    <input type="email" name="Email" placeholder="Enter your email">
+</div>
+<div class="genderContainer">
+    <label>Gender</label>
+    <input type="text" name="Gender" placeholder="Male/Female/Other">
+    <!-- <input class="gender1" type="radio" name="Gender">Male
+    <input class="gender1" type="radio" name="Gender">Female 
+    <input class="gender1" type="radio" name="Gender">Others -->
+</div>
+<div>
+    <label>Mobile</label>
+    <input type="text" name="Mobile No" placeholder="Enter your mobile">
+</div>
+<div>
+    <label>Password</label>
+    <input type="password" name="Password" placeholder="Enter your password">
+</div>
+<div class="btn">
+ <input type="submit" value="Submit" style="background-color: rgb(17, 203, 23);">
+</div>  
+</form>
+</div> 
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbz8yvJze2z4WzZHTgzzeO51D4D1QoVbFjUfC5LCVhNahKRBwmkkLpk3L4yEfkUtMQZBGw/exec'
+    const form = document.forms['google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+</body>
+</html>
