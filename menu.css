@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    text-decoration: none;
+}
+
+html,
+body {
+  font-family: 'Roboto Slab', serif;
+  scroll-behavior: smooth;
+}
+header {
+    height: 8vh;
+  }
+  
+  .logo img {
+    width: 100px;
+    height: 60px;
+    margin-left: 10px;
+    margin-top: -20px;
+  }
+  
+  header nav {
+    display: flex;
+    justify-content: space-between;
+    /* float: right; */
+    /* align-items: center; */
+    padding-top: 20px;
+    color: white;
+    font-size: 20px;
+    text-align: right;
+    background-color: black;
+    width: 100%;
+    height: 120%;
+  }
+  .nav-menu{
+  
+      margin-right: -50%;
+  }
+  .nav-link{
+    /* background-color: rgb(202, 202, 211); */
+  
+    text-align: center;
+    width: 70px;
+  }
+  
+  header ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header ul li {
+    margin-left: 3rem;
+  }
+  
+  header ul li a {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: white;
+    transition: 0.5s;
+  }
+  
+  header ul li a:hover {
+    color: #C1B086;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    header ul {
+      display: block;
+      position: fixed;
+      left: -100%;
+      top: 5rem;
+      flex-direction: column;
+      background-color: #fff;
+      width: 100%;
+      border-radius: 10px;
+      text-align: center;
+      transition: 0.5s;
+      box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+      z-index: 20;
+    }
+  
+    header ul.active {
+      left: 0%;
+    }
+  
+    header ul li {
+      margin: 2.5rem 0;
+    }
+  
+    header ul li a {
+      color: black;
+    }
+  
+  }
+  .restaurant img {
+    width: 100%;
+    height: 50%;
+    
+  }
+  
+  .restaurant .right {
+    padding: 50px 50px 50px 100px;
+  }
+  
+  .restaurant h2 {
+    margin-bottom: 20px;
+    font-weight: 400;
+  }
+  
+  .restaurant .text p {
+    margin-bottom: 50px;
+    line-height: 25px;
+  }
+  
+  .accordionItem {
+    margin-top: 30px;
+  }
+  
+  .accordionItem p {
+    font-size: 15px;
+    opacity: 0.8;
+    font-family: sans-serif;
+    line-height: 20px;
+  }
+  
+  .accordionIHeading {
+    cursor: pointer;
+    width: 100%;
+    border-radius: 3px;
+    font-weight: 400;
+    font-size: 17px;
+    color: #C1B086;
+    margin-bottom: 20px;
+  }
+  
+  .close .accordionItemContent {
+    height: 0px;
+    transition: height 1s ease-out;
+    transform: scaleY(0);
+    float: left;
+    display: block;
+    background-color: #fff;
+  }
+  
+  .open .accordionItemContent {
+    padding: 30px;
+    background-color: #fff;
+    width: 100%;
+    margin: 0 0 10px 0;
+    display: block;
+    transform: scaleY(1);
+    transform-origin: top;
+    transition: transform 0.4s ease;
+    box-sizing: border-box;
+    box-shadow: 0 13px 43px 0 rgb(37 46 89 / 10%);
+  }
+
+  
+  button {
+    padding: 20px 40px;
+    background: none;
+    outline: none;
+    border: 2px solid white;
+    border-radius: 50px;
+    color: white;
+    margin-top: 20px;
+  }
+  
+ 
+  
+  
